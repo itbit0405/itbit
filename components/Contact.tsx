@@ -30,9 +30,9 @@ const Contact: React.FC = () => {
     try {
         await emailjs.send(
             'service_v87fbbb',
-            'template_x0hf9ye',
+            'template_kqyj6wf',
             templateParams,
-            'SQNLEBUv001nQh1sE'
+            'jw9KkOzwrp_V0pKYl'
         );
         
         setSubmitted(true);
