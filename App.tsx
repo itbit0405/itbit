@@ -29,7 +29,7 @@ const App: React.FC = () => {
 
       <footer className="bg-slate-900 text-slate-400 py-12 px-6 text-sm">
         <div className="max-w-7xl mx-auto">
-            <div className="border-b border-white/5 pb-6 mb-6">
+            <div className="border-b border-white/5 pb-6 mb-6 flex flex-col md:flex-row md:justify-between gap-10">
                 <div className="space-y-6">
                     <a href="#home" className="flex items-center gap-3 group">
                         <img 
@@ -45,6 +45,16 @@ const App: React.FC = () => {
                         <p className="flex items-center gap-4"><span className="font-bold text-slate-600 uppercase text-[10px] w-16">Email</span> <a href="mailto:itbit@itbit.co.kr" className="hover:text-white transition">itbit@itbit.co.kr</a></p>
                     </div>
                 </div>
+                <nav aria-label="개발 분야" className="md:text-right">
+                    <p className="font-bold text-slate-600 uppercase text-[10px] tracking-widest mb-5">Services</p>
+                    <ul className="grid grid-cols-2 md:grid-cols-1 gap-x-6 gap-y-3 font-light">
+                        <li><a href="/services/hardware/" className="hover:text-white transition">하드웨어·PCB 설계</a></li>
+                        <li><a href="/services/firmware/" className="hover:text-white transition">펌웨어 개발</a></li>
+                        <li><a href="/services/mobile-app/" className="hover:text-white transition">기기 연동 모바일 앱</a></li>
+                        <li><a href="/services/embedded-linux/" className="hover:text-white transition">임베디드 리눅스</a></li>
+                        <li><a href="/services/pc-software/" className="hover:text-white transition">장비 제어 PC 프로그램</a></li>
+                    </ul>
+                </nav>
             </div>
             <div className="text-[11px] font-medium uppercase tracking-[0.2em] text-slate-600">
                 <p>© 2026 ITBIT Co., Ltd. All rights reserved.</p>
