@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>임베디드 리눅스 개발 외주 | 포팅·커널 드라이버·시스템 SW - 잇빗(ITBIT)</title>
+    <meta name="description" content="잇빗은 임베디드 리눅스 포팅, 커널 드라이버 개발과 최적화, OS 커스터마이징, 장비용 시스템 소프트웨어를 개발합니다. Raspberry Pi 등 리눅스 SBC 기반 제품 개발도 함께합니다.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.itbit.co.kr/services/embedded-linux/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ITBIT 잇빗">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:url" content="https://www.itbit.co.kr/services/embedded-linux/">
+    <meta property="og:title" content="임베디드 리눅스 개발 외주 | 포팅·커널 드라이버·시스템 SW - 잇빗(ITBIT)">
+    <meta property="og:description" content="잇빗은 임베디드 리눅스 포팅, 커널 드라이버 개발과 최적화, OS 커스터마이징, 장비용 시스템 소프트웨어를 개발합니다. Raspberry Pi 등 리눅스 SBC 기반 제품 개발도 함께합니다.">
+    <meta property="og:image" content="https://www.itbit.co.kr/logo.png">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@100;300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Pretendard', sans-serif; } html { scroll-behavior: smooth; }</style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.itbit.co.kr/services/embedded-linux/#service",
+      "name": "임베디드 리눅스 시스템 개발",
+      "serviceType": "임베디드 리눅스 시스템 개발",
+      "description": "잇빗은 임베디드 리눅스 포팅, 커널 드라이버 개발과 최적화, OS 커스터마이징, 장비용 시스템 소프트웨어를 개발합니다. Raspberry Pi 등 리눅스 SBC 기반 제품 개발도 함께합니다.",
+      "url": "https://www.itbit.co.kr/services/embedded-linux/",
+      "areaServed": "KR",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://www.itbit.co.kr/#organization",
+        "name": "잇빗",
+        "alternateName": "ITBIT",
+        "url": "https://www.itbit.co.kr/",
+        "telephone": "+82-505-6552-7778",
+        "email": "itbit@itbit.co.kr"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "홈",
+          "item": "https://www.itbit.co.kr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "서비스",
+          "item": "https://www.itbit.co.kr/#services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "리눅스 시스템",
+          "item": "https://www.itbit.co.kr/services/embedded-linux/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-light antialiased break-keep">
+
+<header class="sticky top-0 z-50 bg-white/85 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.05)]">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+        <a href="/" class="flex items-center gap-3">
+            <img src="/logo.png" alt="ITBIT" class="h-10 w-auto rounded-lg">
+            <span class="text-xl md:text-2xl font-black tracking-tighter uppercase text-[#0B3D6A]">ITBIT</span>
+        </a>
+        <nav class="flex gap-6 lg:gap-8 font-semibold text-sm items-center text-[#0B3D6A]">
+            <a href="/#vision" class="hidden md:inline hover:text-[#2E7BB8]">가치</a>
+            <a href="/#services" class="hidden md:inline hover:text-[#2E7BB8]">분야</a>
+            <a href="/#tech" class="hidden md:inline hover:text-[#2E7BB8]">기술</a>
+            <a href="/#process" class="hidden md:inline hover:text-[#2E7BB8]">프로세스</a>
+            <a href="/#contact" class="px-5 py-2 bg-[#2E7BB8] text-white rounded-full text-xs font-bold shadow-md hover:bg-[#0B3D6A] transition">문의하기</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="bg-[#0B3D6A] text-white px-6 pt-14 pb-20 md:pt-20 md:pb-28">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <nav aria-label="breadcrumb" class="text-sm text-slate-300 mb-8">
+                    <a href="/" class="hover:text-white">홈</a> <span class="mx-2">/</span>
+                    <a href="/#services" class="hover:text-white">서비스</a> <span class="mx-2">/</span>
+                    <span class="text-white">리눅스 시스템</span>
+                </nav>
+                <p class="text-[#7FB6E3] font-bold tracking-[0.3em] uppercase text-xs md:text-sm mb-4">Embedded Linux</p>
+                <h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tight mb-8">임베디드 리눅스 시스템 개발</h1>
+                <p class="text-lg md:text-xl text-slate-200 leading-relaxed mb-10">고성능 연산이나 화면, 네트워크가 필요한 장비에는 임베디드 리눅스가 필요합니다. 리눅스 포팅과 커널 드라이버 최적화부터 OS 커스터마이징, 장비용 시스템 소프트웨어까지 개발합니다.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="/#contact" class="inline-flex items-center gap-2 px-7 py-4 bg-[#2E7BB8] rounded-full font-bold hover:bg-white hover:text-[#0B3D6A] transition">무료 상담 신청 <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+                    <a href="#scope" class="inline-flex items-center gap-2 px-7 py-4 border border-white/30 rounded-full font-bold hover:bg-white/10 transition">제공 범위 보기</a>
+                </div>
+            </div>
+            <div class="max-w-xl w-full mx-auto lg:ml-auto">
+                <svg viewBox="0 0 480 360" role="img" aria-label="임베디드 리눅스 보드와 터미널 일러스트" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+  <rect x="0" y="0" width="480" height="360" rx="40" fill="#F1F7FC"/>
+  
+  <rect x="40" y="70" width="250" height="200" rx="16" fill="#0B3D6A"/>
+  <circle cx="62" cy="92" r="5" fill="#F26D6D"/><circle cx="78" cy="92" r="5" fill="#F5B841"/><circle cx="94" cy="92" r="5" fill="#5CC98A"/>
+  <g font-family="monospace" font-size="12">
+    <text x="58" y="128" fill="#5CC98A">root@itbit</text><text x="136" y="128" fill="#FFFFFF">:~# uname -r</text>
+    <text x="58" y="150" fill="#9CC8EA">6.1.0-custom</text>
+    <text x="58" y="174" fill="#5CC98A">root@itbit</text><text x="136" y="174" fill="#FFFFFF">:~# insmod drv.ko</text>
+    <text x="58" y="196" fill="#9CC8EA">[ OK ] sensor driver loaded</text>
+    <text x="58" y="220" fill="#5CC98A">root@itbit</text><text x="136" y="220" fill="#FFFFFF">:~# _</text>
+  </g>
+  <rect x="270" y="150" width="170" height="150" rx="14" fill="#1E8E5A"/>
+  <rect x="282" y="162" width="146" height="126" rx="8" fill="#23A066"/>
+  <rect x="330" y="196" width="56" height="56" rx="6" fill="#0B3D6A"/>
+  <text x="358" y="229" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#DCEBF7">SoC</text>
+  <g fill="#F5B841"><rect x="292" y="170" width="7" height="12" rx="1.5"/><rect x="305" y="170" width="7" height="12" rx="1.5"/><rect x="318" y="170" width="7" height="12" rx="1.5"/><rect x="331" y="170" width="7" height="12" rx="1.5"/><rect x="344" y="170" width="7" height="12" rx="1.5"/><rect x="357" y="170" width="7" height="12" rx="1.5"/><rect x="370" y="170" width="7" height="12" rx="1.5"/><rect x="383" y="170" width="7" height="12" rx="1.5"/><rect x="396" y="170" width="7" height="12" rx="1.5"/><rect x="409" y="170" width="7" height="12" rx="1.5"/></g>
+  <rect x="296" y="260" width="26" height="20" rx="3" fill="#C7D2DC"/>
+  <rect x="396" y="200" width="26" height="40" rx="3" fill="#C7D2DC"/>
+  <rect x="296" y="202" width="22" height="22" rx="3" fill="#0B3D6A"/>
+</svg>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-slate-100 border-b border-slate-200 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex gap-2 overflow-x-auto">
+            <a href="/services/hardware/" class="px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition bg-white text-slate-600 hover:text-[#2E7BB8] border border-slate-200">하드웨어 설계</a>
+            <a href="/services/firmware/" class="px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition bg-white text-slate-600 hover:text-[#2E7BB8] border border-slate-200">펌웨어 개발</a>
+            <a href="/services/mobile-app/" class="px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition bg-white text-slate-600 hover:text-[#2E7BB8] border border-slate-200">모바일 앱</a>
+            <a href="/services/embedded-linux/" class="px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition bg-[#0B3D6A] text-white" aria-current="page">리눅스 시스템</a>
+            <a href="/services/pc-software/" class="px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition bg-white text-slate-600 hover:text-[#2E7BB8] border border-slate-200">PC 프로그램</a>
+        </div>
+    </div>
+
+    <section class="px-6 py-20 md:py-28">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-[#2E7BB8] font-bold tracking-[0.3em] uppercase text-sm mb-4">Why ITBIT</h2>
+            <p class="text-3xl md:text-4xl font-black text-[#0B3D6A] mb-10 tracking-tight">잇빗에 맡기면 다른 점</p>
+            <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
+                <p>MCU만으로는 부족한 고사양 장비, 예를 들어 화면이 있는 단말기나 영상·데이터를 처리하는 게이트웨이는 임베디드 리눅스로 만드는 경우가 많습니다. 잇빗은 보드에 맞게 리눅스를 올리고 필요한 기능만 남겨 빠르고 안정적인 시스템을 구성합니다.</p>
+                <p>하드웨어와 펌웨어를 함께 다루는 팀이라 커널 드라이버처럼 하드웨어와 맞닿은 부분에 강합니다. Raspberry Pi 같은 SBC로 빠르게 시제품을 만들고, 이후 제품용 보드로 옮기는 과정도 지원합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-6 py-20 md:py-28 bg-white">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-5 gap-12">
+            <div class="md:col-span-2">
+                <h2 class="text-[#2E7BB8] font-bold tracking-[0.3em] uppercase text-sm mb-4">Use Cases</h2>
+                <p class="text-3xl md:text-4xl font-black text-[#0B3D6A] tracking-tight">이런 프로젝트에<br>맡겨 주세요</p>
+            </div>
+            <ul class="md:col-span-3 space-y-4">
+                <li class="flex gap-4 p-6 rounded-2xl bg-slate-50 text-lg text-slate-700"><svg viewBox="0 0 24 24" class="w-5 h-5 shrink-0 mt-0.5 text-[#2E7BB8]" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>화면, 네트워크, 고성능 연산이 필요한 장비를 개발할 때</span></li>
+                <li class="flex gap-4 p-6 rounded-2xl bg-slate-50 text-lg text-slate-700"><svg viewBox="0 0 24 24" class="w-5 h-5 shrink-0 mt-0.5 text-[#2E7BB8]" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>새 보드에 리눅스를 포팅하고 드라이버를 붙여야 할 때</span></li>
+                <li class="flex gap-4 p-6 rounded-2xl bg-slate-50 text-lg text-slate-700"><svg viewBox="0 0 24 24" class="w-5 h-5 shrink-0 mt-0.5 text-[#2E7BB8]" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>부팅 속도, 용량, 안정성을 개선하기 위해 OS를 커스터마이징할 때</span></li>
+                <li class="flex gap-4 p-6 rounded-2xl bg-slate-50 text-lg text-slate-700"><svg viewBox="0 0 24 24" class="w-5 h-5 shrink-0 mt-0.5 text-[#2E7BB8]" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Raspberry Pi 등 SBC로 시제품을 빠르게 만들고 싶을 때</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="scope" class="px-6 py-20 md:py-28 bg-slate-100 scroll-mt-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-[#2E7BB8] font-bold tracking-[0.3em] uppercase text-sm mb-4">Scope</h2>
+                <p class="text-3xl md:text-5xl font-black text-[#0B3D6A] tracking-tight">제공 범위</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-8 bg-white rounded-[32px] shadow-sm">
+                    <span class="text-sm font-black text-[#2E7BB8]">01</span>
+                    <h3 class="text-xl font-bold text-[#0B3D6A] mt-3 mb-3">리눅스 포팅</h3>
+                    <p class="text-slate-500 leading-relaxed">대상 보드에 부트로더와 커널, 루트 파일시스템을 올립니다.</p>
+                </div>
+                <div class="p-8 bg-white rounded-[32px] shadow-sm">
+                    <span class="text-sm font-black text-[#2E7BB8]">02</span>
+                    <h3 class="text-xl font-bold text-[#0B3D6A] mt-3 mb-3">커널 드라이버</h3>
+                    <p class="text-slate-500 leading-relaxed">센서, 통신, 디스플레이 등 장치 드라이버를 개발하고 최적화합니다.</p>
+                </div>
+                <div class="p-8 bg-white rounded-[32px] shadow-sm">
+                    <span class="text-sm font-black text-[#2E7BB8]">03</span>
+                    <h3 class="text-xl font-bold text-[#0B3D6A] mt-3 mb-3">OS 커스터마이징</h3>
+                    <p class="text-slate-500 leading-relaxed">필요한 기능만 남기고 부팅 속도와 용량, 안정성을 개선합니다.</p>
+                </div>
+                <div class="p-8 bg-white rounded-[32px] shadow-sm">
+                    <span class="text-sm font-black text-[#2E7BB8]">04</span>
+                    <h3 class="text-xl font-bold text-[#0B3D6A] mt-3 mb-3">시스템 소프트웨어</h3>
+                    <p class="text-slate-500 leading-relaxed">장비 동작을 담당하는 서비스와 애플리케이션을 개발합니다.</p>
+                </div>
+                <div class="p-8 bg-white rounded-[32px] shadow-sm">
+                    <span class="text-sm font-black text-[#2E7BB8]">05</span>
+                    <h3 class="text-xl font-bold text-[#0B3D6A] mt-3 mb-3">네트워크·원격 관리</h3>
+                    <p class="text-slate-500 leading-relaxed">유무선 네트워크 연결과 원격 업데이트 구조를 구성합니다.</p>
+                </div>
+                <div class="p-8 bg-white rounded-[32px] shadow-sm">
+                    <span class="text-sm font-black text-[#2E7BB8]">06</span>
+                    <h3 class="text-xl font-bold text-[#0B3D6A] mt-3 mb-3">SBC 기반 시제품</h3>
+                    <p class="text-slate-500 leading-relaxed">Raspberry Pi 등 SBC로 빠르게 시제품을 만들고 검증합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-6 py-20 md:py-28 bg-white">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-[#2E7BB8] font-bold tracking-[0.3em] uppercase text-sm mb-4">Tech Stack</h2>
+            <p class="text-3xl md:text-4xl font-black text-[#0B3D6A] tracking-tight mb-12">사용 기술</p>
+            <ul class="flex flex-wrap justify-center gap-3">
+                <li class="px-5 py-3 rounded-full bg-slate-50 border border-slate-200 font-semibold text-slate-700">Embedded Linux</li>
+                <li class="px-5 py-3 rounded-full bg-slate-50 border border-slate-200 font-semibold text-slate-700">Linux 커널 드라이버</li>
+                <li class="px-5 py-3 rounded-full bg-slate-50 border border-slate-200 font-semibold text-slate-700">OS 커스터마이징</li>
+                <li class="px-5 py-3 rounded-full bg-slate-50 border border-slate-200 font-semibold text-slate-700">Raspberry Pi</li>
+                <li class="px-5 py-3 rounded-full bg-slate-50 border border-slate-200 font-semibold text-slate-700">Linux SBC</li>
+                <li class="px-5 py-3 rounded-full bg-slate-50 border border-slate-200 font-semibold text-slate-700">Python</li>
+                <li class="px-5 py-3 rounded-full bg-slate-50 border border-slate-200 font-semibold text-slate-700">네트워크</li>
+                <li class="px-5 py-3 rounded-full bg-slate-50 border border-slate-200 font-semibold text-slate-700">원격 업데이트</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="px-6 py-20 md:py-28 bg-[#0B3D6A] text-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-[#7FB6E3] font-bold tracking-[0.3em] uppercase text-sm mb-4">Process</h2>
+                <p class="text-3xl md:text-5xl font-black tracking-tight">진행 절차</p>
+            </div>
+            <ol class="grid md:grid-cols-3 gap-6">
+                <li class="p-8 rounded-[32px] bg-white/5 border border-white/10">
+                    <span class="inline-flex w-12 h-12 rounded-full bg-[#2E7BB8] items-center justify-center font-black text-lg mb-6">1</span>
+                    <h3 class="text-xl font-bold mb-3">플랫폼 선정·분석</h3>
+                    <p class="text-slate-300 leading-relaxed">요구 성능에 맞는 SoC와 보드를 정하고 시스템 구성을 설계합니다.</p>
+                </li>
+                <li class="p-8 rounded-[32px] bg-white/5 border border-white/10">
+                    <span class="inline-flex w-12 h-12 rounded-full bg-[#2E7BB8] items-center justify-center font-black text-lg mb-6">2</span>
+                    <h3 class="text-xl font-bold mb-3">포팅·드라이버 개발</h3>
+                    <p class="text-slate-300 leading-relaxed">리눅스를 올리고 필요한 드라이버와 시스템 소프트웨어를 개발합니다.</p>
+                </li>
+                <li class="p-8 rounded-[32px] bg-white/5 border border-white/10">
+                    <span class="inline-flex w-12 h-12 rounded-full bg-[#2E7BB8] items-center justify-center font-black text-lg mb-6">3</span>
+                    <h3 class="text-xl font-bold mb-3">안정화·납품</h3>
+                    <p class="text-slate-300 leading-relaxed">장시간 구동 시험으로 안정성을 확인하고 이미지와 소스를 납품합니다.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="px-6 py-20 md:py-28">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-[#2E7BB8] font-bold tracking-[0.3em] uppercase text-sm mb-4">Related</h2>
+            <p class="text-3xl md:text-4xl font-black text-[#0B3D6A] tracking-tight mb-12">함께 맡기면 좋은 서비스</p>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="/services/firmware/" class="group p-8 bg-white rounded-[32px] shadow-sm hover:shadow-xl hover:-translate-y-1 transition">
+                    <h3 class="text-xl font-bold text-[#0B3D6A] mb-3">펌웨어 개발 외주</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">기기의 두뇌인 펌웨어를 개발합니다.</p>
+                    <span class="inline-flex items-center gap-2 text-[#2E7BB8] font-bold">자세히 보기 <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+                </a>
+                <a href="/services/hardware/" class="group p-8 bg-white rounded-[32px] shadow-sm hover:shadow-xl hover:-translate-y-1 transition">
+                    <h3 class="text-xl font-bold text-[#0B3D6A] mb-3">하드웨어·PCB 설계 외주</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">아이디어 단계의 제품을 실제로 동작하는 전자 회로로 만듭니다.</p>
+                    <span class="inline-flex items-center gap-2 text-[#2E7BB8] font-bold">자세히 보기 <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+                </a>
+                <a href="/services/pc-software/" class="group p-8 bg-white rounded-[32px] shadow-sm hover:shadow-xl hover:-translate-y-1 transition">
+                    <h3 class="text-xl font-bold text-[#0B3D6A] mb-3">장비 제어용 PC 프로그램 개발</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">장비를 설정하고 제어하거나, 기기에서 나온 데이터를 수집해 분석하는 PC 프로그램을 만듭니다.</p>
+                    <span class="inline-flex items-center gap-2 text-[#2E7BB8] font-bold">자세히 보기 <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-6 pb-24">
+        <div class="max-w-7xl mx-auto rounded-[48px] bg-[#2E7BB8] text-white p-10 md:p-16 flex flex-col md:flex-row md:items-center justify-between gap-8">
+            <div>
+                <p class="text-3xl md:text-4xl font-black tracking-tight mb-4">리눅스 시스템, 잇빗과 상의해 보세요</p>
+                <p class="text-lg text-blue-50">아이디어만 있어도 괜찮습니다. 전문 엔지니어가 직접 검토해 드립니다.</p>
+            </div>
+            <div class="flex flex-col gap-3 shrink-0">
+                <a href="/#contact" class="px-8 py-4 bg-white text-[#0B3D6A] rounded-full font-bold text-center hover:bg-[#0B3D6A] hover:text-white transition">상담 신청하기</a>
+                <a href="tel:050-6552-7778" class="text-center font-bold text-blue-50 hover:text-white">050-6552-7778</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-slate-900 text-slate-400 py-12 px-6 text-sm">
+    <div class="max-w-7xl mx-auto">
+        <div class="border-b border-white/5 pb-6 mb-6 space-y-6">
+            <a href="/" class="flex items-center gap-3">
+                <img src="/logo.png" alt="ITBIT" class="w-10 h-10 object-contain">
+                <span class="text-2xl font-black text-white tracking-tighter uppercase">ITBIT</span>
+            </a>
+            <nav class="flex flex-wrap gap-x-6 gap-y-2">
+                <a href="/services/hardware/" class="hover:text-white">하드웨어 설계</a>
+                <a href="/services/firmware/" class="hover:text-white">펌웨어 개발</a>
+                <a href="/services/mobile-app/" class="hover:text-white">모바일 앱</a>
+                <a href="/services/embedded-linux/" class="hover:text-white">리눅스 시스템</a>
+                <a href="/services/pc-software/" class="hover:text-white">PC 프로그램</a>
+            </nav>
+            <address class="not-italic space-y-3 leading-relaxed font-light">
+                <p class="flex items-start gap-4"><span class="font-bold text-slate-600 uppercase text-[10px] w-16 pt-1">Address</span> <span>서울특별시 금천구 가산디지털1로 120<br>G밸리 창업큐브 807호</span></p>
+                <p class="flex items-center gap-4"><span class="font-bold text-slate-600 uppercase text-[10px] w-16">Tel</span> 050-6552-7778</p>
+                <p class="flex items-center gap-4"><span class="font-bold text-slate-600 uppercase text-[10px] w-16">Email</span> <a href="mailto:itbit@itbit.co.kr" class="hover:text-white">itbit@itbit.co.kr</a></p>
+            </address>
+        </div>
+        <p class="text-[11px] font-medium uppercase tracking-[0.2em] text-slate-600">© 2026 ITBIT Co., Ltd. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

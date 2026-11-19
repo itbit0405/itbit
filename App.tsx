@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Mail, MapPin } from 'lucide-react';
 
 // Components
@@ -10,13 +10,29 @@ import Tech from './components/Tech.tsx';
 import Process from './components/Process.tsx';
 import Media from './components/Media.tsx';
 import Contact from './components/Contact.tsx';
+import Board from './components/Board.tsx';
+import BoardList from './components/BoardList.tsx';
 import logo from './logo.png'; // 로고 파일 경로
 
 const App: React.FC = () => {
+  // 게시판 화면 전환: null이면 홈, 'list'면 목록, 숫자면 해당 글
+  const [boardView, setBoardView] = useState<null | 'list' | number>(null);
+
+  const backToHome = (target: string = 'board') => {
+    setBoardView(null);
+    setTimeout(() => document.getElementById(target)?.scrollIntoView(), 0);
+  };
+
   return (
     <div className="relative min-h-screen bg-slate-50 text-slate-900">
       <Header />
-      
+
+      {boardView !== null ? (
+        <BoardList
+          onBack={backToHome}
+          initialPostId={typeof boardView === 'number' ? boardView : null}
+        />
+      ) : (
       <main>
         <Hero />
         <Vision />
@@ -24,8 +40,15 @@ const App: React.FC = () => {
         <Tech />
         <Process />
         <Media />
+        <div className="bg-[#050505]">
+          <Board
+            onViewAll={() => { setBoardView('list'); window.scrollTo(0, 0); }}
+            onSelectPost={(id) => { setBoardView(id); window.scrollTo(0, 0); }}
+          />
+        </div>
         <Contact />
       </main>
+      )}
 
       <footer className="bg-slate-900 text-slate-400 py-12 px-6 text-sm">
         <div className="max-w-7xl mx-auto">

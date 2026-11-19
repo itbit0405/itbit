@@ -25,6 +25,7 @@ const Header: React.FC = () => {
     { label: '분야', href: '#services' },
     { label: '기술', href: '#tech' },
     { label: '프로세스', href: '#process' },
+    { label: '소식', href: '#board' },
   ];
 
   return (
